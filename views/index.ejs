@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div id='map'></div>
+    <nav class="layerSelect" style="position: fixed; top: 30px; right: 15px;">
+    <div id="toggler">
+    <i id="stacks" class="fa fa-database"></i>
+    <div id="layers" style="display: none;">
+      <ul>
+        <li class="category-group category1"><p class='category-text'>City<span id="1" class="trigger"><i style="padding-left: 115px;" class="fa fa-caret-down"></i></span></p>
+          <ul>
+            <li class="theme"><p class="theme-heading">Environmental</p>
+              <ul>
+                <li class="layer"><p><input id="input0" type="checkbox" mapboxID='urbinsight.dailysolidwasteLima'>Solid Waste Generation</p></li>
+                <li class="layer"><p><input id="input1" type="checkbox" mapboxID='urbinsight.miningconcessionsLima'>Mining Concessions</p></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="category-group category2"><p class='category-text'>Community<span id="2" class="trigger"><i style="padding-left: 40px;" class="fa fa-caret-down"></i></span></p>
+          <ul>
+            <li class="theme"><p class="theme-heading">Infrastructure</p>
+              <ul>
+                <li class="layer"><p><input id="input2" type="checkbox" mapboxID='urbinsight.communityResource'>Community Resources</p></li>
+                <li class="layer"><p><input id="input3" type="checkbox" mapboxID='urbinsight.jose-galvez-zoning'>Jose Galvez - Zoning</p></li>
+              </ul>
+            </li>
+            <li class="theme"><p class="theme-heading">Social</p>
+              <ul>
+                <li class="layer"><p><input id="input4" type="checkbox" mapboxID='urbinsight.hillsidecensus'>Hillside Census</p></li>
+                <li class="layer"><p><input id="input5" type="checkbox" mapboxID='urbinsight.publichealthrisks'>Public Health Risks</p></li>
+              </ul>
+            </li>
+            <li class="theme"><p class="theme-heading">Geographic</p>
+              <ul>
+                <li class="layer"><p><input id="input6" type="checkbox" mapboxID='urbinsight.JGtopology'>Topological</p></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      </div>
+      </div>
+    </nav>
+    <script type="text/javascript" src="/javascripts/map.js"></script>
+  </body>
+</html>
